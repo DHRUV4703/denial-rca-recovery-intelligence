@@ -1,0 +1,78 @@
+# =============================================================================
+#  Denial Root Cause & Recovery Intelligence — Dependency Manifest
+#  All packages pinned with == for full reproducibility across environments.
+#  Python 3.11 or 3.12 required.
+#
+#  Install:
+#      pip install --upgrade pip
+#      pip install -r requirements.txt
+#
+#  Modules:
+#    [A] Denial RCA & Recovery Agents v1         (Denial_Root_Cause_&_Recovery_Agents_v1/)
+#    [B] Recovery Intelligence Modeling v1       (Recovery_Intelligence_Modeling_v1/)
+#    [C] Data Quality v1                         (Data_Quality_v1/)
+#    [D] Test Suite v1                           (Test_cases_v1/)
+# =============================================================================
+
+
+# ── Core Data Stack ───────────────────────────────────────── [A][B][C][D]
+numpy==1.26.4
+pandas==2.2.2
+scipy==1.13.1
+
+
+# ── Machine Learning — Core ───────────────────────────────── [A][B][D]
+scikit-learn==1.5.1
+joblib==1.4.2
+
+
+# ── Machine Learning — Gradient Boosting Frameworks ──────── [B][D]
+xgboost==2.1.1
+lightgbm==4.5.0
+catboost==1.2.5
+
+
+# ── Machine Learning — Imbalanced Data Handling ──────────── [B][D]
+imbalanced-learn==0.12.3
+
+
+# ── Model Explainability ──────────────────────────────────── [B][D]
+shap==0.46.0
+
+
+# ── Semantic Similarity / Vector Search ──────────────────── [A][D]
+sentence-transformers==3.2.1
+faiss-cpu==1.8.0
+
+
+# ── LangGraph — Agent Orchestration ──────────────────────── [A][D]
+langgraph==0.2.28
+langchain-core==0.3.15
+
+
+# ── LLM Provider SDKs ────────────────────────────────────── [A][D]
+# Primary: Claude (Anthropic) — default in Config/config.py
+langchain-anthropic==0.3.3
+anthropic==0.34.2
+
+# Alternate providers — configure in Config/config.py -> DEFAULT_LLM
+langchain-groq==0.2.1
+langchain-google-genai==2.0.4
+langchain-openai==0.2.5
+openai==1.47.0
+groq==0.11.0
+google-generativeai==0.8.3
+
+
+# ── Excel / File I/O ──────────────────────────────────────── [B][C][D]
+openpyxl==3.1.5
+xlrd==2.0.1
+
+
+# ── Environment & Configuration ──────────────────────────── [A][D]
+python-dotenv==1.0.1
+
+
+# ── Testing ───────────────────────────────────────────────── [D]
+pytest==8.3.3
+pytest-cov==5.0.0

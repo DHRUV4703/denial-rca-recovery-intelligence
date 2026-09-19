@@ -1,0 +1,25 @@
+# Environment / secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Data & pipeline outputs (kept out of git — see README for data handling)
+data/
+Data/
+output/
+outputs/
+
+# Model artifacts
+*.pkl
+*.pkl.bak
+*.joblib
+
+# Data files
+*.xlsx
+*.csv
+
+# Logs
+*.log
